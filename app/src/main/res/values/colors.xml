@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Eco-Logic Design System -->
+    <color name="primary_forest_green">#2D5A27</color>
+    <color name="background_leaf_light">#E8F5E9</color>
+    <color name="surface_clean_white">#FFFFFF</color>
+    <color name="text_soil_dark">#1A1A1A</color>
+    <color name="muted_stone_gray">#8D99AE</color>
+    <color name="accent_river_blue">#4DA8DA</color>
+    <color name="warning_sun_yellow">#FFD54F</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="dark_editor_background">#121212</color>
+    <color name="dark_editor_surface">#1E1E1E</color>
+</resources>

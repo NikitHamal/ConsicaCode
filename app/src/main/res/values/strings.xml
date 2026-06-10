@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Consica Code</string>
+    <string name="short_app_name">Ccode</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_age">How old are you?</string>
+    <string name="onboarding_age_8_12">8-12 (Playful &amp; Guided)</string>
+    <string name="onboarding_age_13_16">13-16 (Learning to Code)</string>
+    <string name="onboarding_age_16_plus">16+ (Professional Coding)</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_start">Start Growing!</string>
+    <string name="onboarding_start_pro">Start Coding</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Biome</string>
+    <string name="nav_workspace">Workspace</string>
+    <string name="nav_rewards">Rewards</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Editor / Playground -->
+    <string name="editor_run_beginner">Grow!</string>
+    <string name="editor_run_pro">Run Code</string>
+    <string name="editor_html_tab">HTML</string>
+    <string name="editor_python_tab">Python</string>
+    <string name="editor_output_tab">Output</string>
+
+    <!-- Terra Dialogues -->
+    <string name="terra_welcome_beginner">Hi! I\'m Terra! Let\'s grow a digital ecosystem together using code!</string>
+    <string name="terra_welcome_pro">Welcome. Let\'s write some code and build projects.</string>
+    <string name="terra_offline_warning">We are offline! But don\'t worry, everything is saved safely in your nest.</string>
+
+    <!-- Rewards -->
+    <string name="reward_xp_earned">XP Earned!</string>
+    <string name="reward_badge_unlocked">Badge Unlocked!</string>
+    <string name="reward_sun_coins">Sun Coins</string>
+    <string name="reward_water_drops">Water Drops</string>
+
+    <!-- General -->
+    <string name="locked_feature">Locked! Keep learning to unlock this feature.</string>
+    <string name="error_generic">Oops! Something went wrong.</string>
+
+    <!-- Biome Map Screen -->
+    <string name="biome_title_forest_floor">Forest Floor</string>
+    <string name="biome_xp_format">%d XP</string>
+    <string name="biome_node_html_basics">HTML Basics</string>
+    <string name="biome_node_python_print">Python Print</string>
+    <string name="biome_node_loops_growth">Loops &amp; Growth</string>
+
+    <!-- Green Code Playground Screen -->
+    <string name="playground_title">Code Playground</string>
+    <string name="playground_default_code">print(\'Hello Forest!\')</string>
+    <string name="playground_instruction">Let\'s plant a seed! Write a print statement.</string>
+    <string name="playground_output_label">Output:</string>
+
+    <!-- Ecosystem Screen -->
+    <string name="ecosystem_success_message">Great job! Your seed is sprouting!</string>
+    <string name="ecosystem_continue_button">Continue to Path</string>
+    <string name="ecosystem_success_description">Success</string>
+
+    <!-- Rewards Screen -->
+    <string name="rewards_title">Rewards Dashboard</string>
+    <string name="rewards_total_xp">Total XP: %d</string>
+    <string name="rewards_current_streak">Current Streak: %d Days</string>
+    <string name="rewards_badges_earned">Badges Earned</string>
+    <string name="rewards_badge_first_sprout">First Sprout</string>
+    <string name="rewards_badge_html_hero">HTML Hero</string>
+    <string name="rewards_badge_python_pal">Python Pal</string>
+
+    <!-- Terra Tutorial Screen -->
+    <string name="terra_tutorial_message">Hi! I\'m Terra. Today we are going to learn how to print things to the screen using Python! We\'ll use the \'print()\' command.</string>
+    <string name="terra_tutorial_start_coding">Start Coding</string>
+
+</resources>
