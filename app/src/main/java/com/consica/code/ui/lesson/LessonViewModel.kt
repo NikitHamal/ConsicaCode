@@ -3,6 +3,7 @@ package com.consica.code.ui.lesson
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.consica.code.ConsicaCodeApp
+import com.consica.code.dataStore
 import com.consica.code.data.model.UserProfile
 import com.consica.code.data.repository.AppRepository
 import kotlinx.coroutines.delay

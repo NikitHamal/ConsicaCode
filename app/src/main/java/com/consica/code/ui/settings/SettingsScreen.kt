@@ -20,6 +20,7 @@ import com.consica.code.R
 import com.consica.code.data.model.*
 import com.consica.code.data.repository.AppRepository
 import com.consica.code.ConsicaCodeApp
+import com.consica.code.dataStore
 import com.consica.code.ui.theme.*
 import kotlinx.coroutines.launch
 

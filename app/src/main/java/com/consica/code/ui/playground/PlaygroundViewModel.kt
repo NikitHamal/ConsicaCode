@@ -3,6 +3,7 @@ package com.consica.code.ui.playground
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.consica.code.ConsicaCodeApp
+import com.consica.code.dataStore
 import com.consica.code.data.local.entity.CodeHistoryEntity
 import com.consica.code.data.model.*
 import com.consica.code.data.repository.AppRepository

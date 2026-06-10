@@ -1,6 +1,7 @@
 package com.consica.code.ui.path
 
 import androidx.compose.animation.core.*
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -17,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.consica.code.R
 import com.consica.code.ui.theme.*
 
@@ -35,8 +37,7 @@ fun LearningPathScreen(
     onLessonClick: (String) -> Unit,
     onBack: () -> Unit
 ) {
-    val paths = remember {
-        mapOf(
+    val paths = mapOf(
             stringResource(R.string.path_beginner_web) to listOf(
                 PathLesson("seed_001", "Planting a Seed", "🌱", true, false, "HTML"),
                 PathLesson("lesson_002", "What is the Web?", "🌐", true, false, "Concepts"),
@@ -75,7 +76,6 @@ fun LearningPathScreen(
                 PathLesson("adv_006", "Capstone Challenge", "🎓", false, false, "Challenge")
             )
         )
-    }
 
     Column(
         modifier = Modifier
@@ -117,7 +117,7 @@ fun LearningPathScreen(
                         }
                     ),
                     border = if (lesson.isUnlocked && !lesson.isCompleted)
-                        androidx.compose.foundation.BorderStroke(1.dp, StoneGrayLight)
+                        BorderStroke(1.dp, StoneGrayLight)
                     else null
                 ) {
                     Row(
@@ -126,7 +126,7 @@ fun LearningPathScreen(
                     ) {
                         Text(
                             text = if (lesson.isUnlocked) lesson.emoji else "🔒",
-                            fontSize = androidx.compose.ui.unit.sp.times(24)
+                            fontSize = 24.sp
                         )
                         Spacer(Modifier.width(14.dp))
                         Column(modifier = Modifier.weight(1f)) {

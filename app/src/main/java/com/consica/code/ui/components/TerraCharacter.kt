@@ -13,6 +13,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
@@ -48,8 +49,10 @@ fun TerraAvatar(
         contentAlignment = Alignment.Center
     ) {
         Canvas(modifier = Modifier.fillMaxSize()) {
-            val center = Offset(size.width / 2, size.height / 2)
-            val radius = size.width / 2
+            val canvasWidth = this.size.width
+            val canvasHeight = this.size.height
+            val center = Offset(canvasWidth / 2, canvasHeight / 2)
+            val radius = minOf(canvasWidth, canvasHeight) / 2
 
             // Owl body
             drawCircle(

@@ -35,13 +35,13 @@ fun TerrasNestScreen(
     onBack: () -> Unit,
     viewModel: LessonViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 ) {
-    val profile by viewModel.userProfile.collectAsState()
+    val profile by viewModel.userProfile.collectAsState(initial = UserProfile())
     val lesson = remember(lessonId) { LessonLibrary.getSeedLesson() }
     val guide = remember { CharacterGuide() }
     val explanation = remember(profile.ageGroup, lesson) {
         guide.getLessonExplanation(profile.ageGroup, lesson.terraDialogue)
     }
-    val showContent by viewModel.showContent.collectAsState()
+    val showContent by viewModel.showContent.collectAsState(initial = false)
 
     LaunchedEffect(lessonId) {
         viewModel.startReveal()

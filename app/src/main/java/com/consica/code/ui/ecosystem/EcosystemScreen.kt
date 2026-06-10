@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.consica.code.R
 import com.consica.code.data.model.AgeGroup
+import com.consica.code.data.model.UserProfile
 import com.consica.code.data.repository.AppRepository
 import com.consica.code.domain.CharacterGuide
 import com.consica.code.ui.components.TerraAvatar
@@ -41,10 +42,10 @@ fun EcosystemScreen(
     onBack: () -> Unit,
     viewModel: EcosystemViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 ) {
-    val profile by viewModel.userProfile.collectAsState()
-    val isSuccess by viewModel.isSuccess.collectAsState()
-    val earnedXp by viewModel.earnedXp.collectAsState()
-    val showCelebration by viewModel.showCelebration.collectAsState()
+    val profile by viewModel.userProfile.collectAsState(initial = UserProfile())
+    val isSuccess by viewModel.isSuccess.collectAsState(initial = true)
+    val earnedXp by viewModel.earnedXp.collectAsState(initial = 0)
+    val showCelebration by viewModel.showCelebration.collectAsState(initial = false)
 
     val isYoung = profile.ageGroup == AgeGroup.YOUNG
 

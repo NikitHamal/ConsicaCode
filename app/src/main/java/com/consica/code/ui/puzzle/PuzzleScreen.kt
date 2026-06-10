@@ -7,6 +7,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -25,7 +26,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModel
 import com.consica.code.R
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.update
 import com.consica.code.ui.components.TerraDialogueBubble
 import com.consica.code.ui.theme.*
 
@@ -35,10 +40,10 @@ fun PuzzleScreen(
     onBack: () -> Unit,
     viewModel: PuzzleViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 ) {
-    val puzzleState by viewModel.puzzleState.collectAsState()
-    val draggedIndex by viewModel.draggedIndex.collectAsState()
-    val isChecking by viewModel.isChecking.collectAsState()
-    val result by viewModel.result.collectAsState()
+    val puzzleState by viewModel.puzzleState.collectAsState(initial = PuzzleUiState())
+    val draggedIndex by viewModel.draggedIndex.collectAsState(initial = -1)
+    val isChecking by viewModel.isChecking.collectAsState(initial = false)
+    val result by viewModel.result.collectAsState(initial = null)
 
     Column(
         modifier = Modifier
@@ -148,19 +153,17 @@ fun PuzzleScreen(
                 verticalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.weight(1f)
             ) {
-                items(puzzleState.currentBlocks) { block ->
+                items(
+                    count = puzzleState.currentBlocks.size,
+                    key = { puzzleState.currentBlocks[it].id }
+                ) { index ->
+                    val block = puzzleState.currentBlocks[index]
                     CodeBlockCard(
                         block = block,
-                        isDragging = draggedIndex == puzzleState.currentBlocks.indexOf(block),
-                        onDragStart = {
-                            viewModel.startDragging(puzzleState.currentBlocks.indexOf(block))
-                        },
-                        onMoveUp = {
-                            viewModel.moveBlock(puzzleState.currentBlocks.indexOf(block), -1)
-                        },
-                        onMoveDown = {
-                            viewModel.moveBlock(puzzleState.currentBlocks.indexOf(block), 1)
-                        }
+                        isDragging = draggedIndex == index,
+                        onDragStart = { viewModel.startDragging(index) },
+                        onMoveUp = { viewModel.moveBlock(index, -1) },
+                        onMoveDown = { viewModel.moveBlock(index, 1) }
                     )
                 }
             }
@@ -222,9 +225,9 @@ fun CodeBlockCard(
             containerColor = if (isDragging) RiverBlue.copy(alpha = 0.08f) else CleanWhite
         ),
         border = if (isDragging)
-            androidx.compose.foundation.BorderStroke(2.dp, RiverBlue)
+            BorderStroke(2.dp, RiverBlue)
         else
-            androidx.compose.foundation.BorderStroke(1.dp, StoneGrayLight)
+            BorderStroke(1.dp, StoneGrayLight)
     ) {
         Row(
             modifier = Modifier
@@ -273,7 +276,7 @@ data class PuzzleBlock(
     val correctPosition: Int
 )
 
-class PuzzleViewModel : androidx.lifecycle.ViewModel() {
+class PuzzleViewModel : ViewModel() {
     private val defaultBlocks = listOf(
         PuzzleBlock("1", "<h1>Hello World</h1>", 1),
         PuzzleBlock("2", "</body>", 4),

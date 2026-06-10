@@ -7,6 +7,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
@@ -38,13 +39,13 @@ fun PlaygroundScreen(
     onBack: () -> Unit,
     viewModel: PlaygroundViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 ) {
-    val profile by viewModel.userProfile.collectAsState()
-    val codeState by viewModel.codeFieldValue.collectAsState()
-    val output by viewModel.output.collectAsState()
-    val isRunning by viewModel.isRunning.collectAsState()
-    val showOutput by viewModel.showOutput.collectAsState()
-    val language by viewModel.currentLanguage.collectAsState()
-    val showHint by viewModel.showHint.collectAsState()
+    val profile by viewModel.userProfile.collectAsState(initial = UserProfile())
+    val codeState by viewModel.codeFieldValue.collectAsState(initial = androidx.compose.ui.text.input.TextFieldValue(""))
+    val output by viewModel.output.collectAsState(initial = "")
+    val isRunning by viewModel.isRunning.collectAsState(initial = false)
+    val showOutput by viewModel.showOutput.collectAsState(initial = false)
+    val language by viewModel.currentLanguage.collectAsState(initial = CodeLanguage.HTML)
+    val showHint by viewModel.showHint.collectAsState(initial = true)
 
     val isYoung = profile.ageGroup == AgeGroup.YOUNG
     val isPro = profile.ageGroup == AgeGroup.YOUNG_ADULT || profile.professionalModeUnlocked

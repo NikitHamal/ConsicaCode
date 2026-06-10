@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -26,6 +27,7 @@ import com.consica.code.data.local.entity.*
 import com.consica.code.data.model.*
 import com.consica.code.data.repository.AppRepository
 import com.consica.code.ConsicaCodeApp
+import com.consica.code.dataStore
 import com.consica.code.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -111,7 +113,7 @@ fun RewardsScreen(
                     }
                     Spacer(Modifier.height(8.dp))
                     LinearProgressIndicator(
-                        progress = { currentXp.toFloat() / nextLevelXp.toFloat() },
+                        progress = currentXp.toFloat() / nextLevelXp.toFloat(),
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(10.dp),
@@ -162,7 +164,7 @@ fun RewardsScreen(
                             containerColor = if (earned) CleanWhite else StoneGrayLight.copy(alpha = 0.2f)
                         ),
                         border = if (earned) null
-                        else androidx.compose.foundation.BorderStroke(1.dp, StoneGray.copy(alpha = 0.3f))
+                        else BorderStroke(1.dp, StoneGray.copy(alpha = 0.3f))
                     ) {
                         Column(
                             modifier = Modifier

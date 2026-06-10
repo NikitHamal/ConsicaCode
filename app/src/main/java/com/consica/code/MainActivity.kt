@@ -21,13 +21,13 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContent {
-            ConsicaCodeApp()
+            ConsicaCodeRoot()
         }
     }
 }
 
 @Composable
-fun ConsicaCodeApp() {
+fun ConsicaCodeRoot() {
     val onboardingViewModel: OnboardingViewModel = viewModel()
     val onboardingComplete by onboardingViewModel.onboardingComplete.collectAsState(initial = false)
 

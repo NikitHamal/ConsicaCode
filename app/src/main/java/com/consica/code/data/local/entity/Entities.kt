@@ -2,7 +2,6 @@ package com.consica.code.data.local.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "user_progress")
@@ -40,7 +39,6 @@ data class UserProgressEntity(
     @ColumnInfo(name = "completed_puzzle_ids")
     val completedPuzzleIds: String = "[]"
 ) {
-    @Ignore
     val xpForNextLevel: Int get() = level * 100 + 50
 }
 

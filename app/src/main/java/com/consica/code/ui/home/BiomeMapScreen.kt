@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.consica.code.R
 import com.consica.code.data.model.AgeGroup
+import com.consica.code.data.model.UserProfile
 import com.consica.code.ui.components.TerraAvatar
 import com.consica.code.ui.components.TerraDialogueBubble
 import com.consica.code.ui.components.BiomeNode
@@ -40,9 +41,9 @@ fun BiomeMapScreen(
     onWorkspaceClick: () -> Unit,
     viewModel: HomeViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 ) {
-    val profile by viewModel.userProfile.collectAsState()
-    val progress by viewModel.progress.collectAsState()
-    val isOffline by viewModel.isOffline.collectAsState()
+    val profile by viewModel.userProfile.collectAsState(initial = UserProfile())
+    val progress by viewModel.progress.collectAsState(initial = null)
+    val isOffline by viewModel.isOffline.collectAsState(initial = false)
 
     Column(
         modifier = Modifier
