@@ -31,6 +31,7 @@ import com.consica.code.R
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.flow.asStateFlow
 import com.consica.code.ui.components.TerraDialogueBubble
 import com.consica.code.ui.theme.*
 
