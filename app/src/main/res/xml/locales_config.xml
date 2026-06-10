@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <locale android:name="en" />
+    <!-- Future locale support -->
+    <!-- <locale android:name="ne" /> Nepali -->
+    <!-- <locale android:name="mai" /> Maithili -->
+    <!-- <locale android:name="bho" /> Bhojpuri -->
+    <!-- <locale android:name="newa" /> Nepal Bhasa (Newari) -->
+</locale-config>

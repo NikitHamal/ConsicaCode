@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Seed/Leaf icon for Consica Code -->
+    <path
+        android:fillColor="#2D5A27"
+        android:pathData="M54,30C54,30 70,40 70,58C70,68 62,76 54,76C46,76 38,68 38,58C38,40 54,30 54,30Z" />
+    <path
+        android:fillColor="#4A7A43"
+        android:pathData="M54,32C54,32 50,50 44,56C40,60 46,68 54,68C62,68 68,60 64,56C58,50 54,32 54,32Z" />
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M54,42m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" />
+    <!-- Code brackets -->
+    <path
+        android:fillColor="#4DA8DA"
+        android:pathData="M30,78L26,82L30,86"
+        android:strokeWidth="2"
+        android:strokeColor="#4DA8DA"
+        android:fillColor="#00000000" />
+    <path
+        android:fillColor="#4DA8DA"
+        android:pathData="M78,78L82,82L78,86"
+        android:strokeWidth="2"
+        android:strokeColor="#4DA8DA"
+        android:fillColor="#00000000" />
+</vector>

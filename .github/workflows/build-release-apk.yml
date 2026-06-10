@@ -1,0 +1,59 @@
+name: Build Release APK
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Signed Release APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          cache-disabled: false
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease --no-daemon
+
+      - name: Rename APK with commit hash
+        id: rename_apk
+        run: |
+          COMMIT_HASH=$(git rev-parse --short HEAD)
+          APK_SOURCE="app/build/outputs/apk/release/app-release.apk"
+          APK_DEST="consica-code-${COMMIT_HASH}-release.apk"
+          cp "${APK_SOURCE}" "${APK_DEST}"
+          echo "apk_name=${APK_DEST}" >> $GITHUB_OUTPUT
+          echo "commit_hash=${COMMIT_HASH}" >> $GITHUB_OUTPUT
+
+      - name: Upload signed APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: consica-code-${{ steps.rename_apk.outputs.commit_hash }}-release
+          path: ${{ steps.rename_apk.outputs.apk_name }}
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Build summary
+        run: |
+          echo "## ✅ Build Complete" >> $GITHUB_STEP_SUMMARY
+          echo "- **APK**: ${{ steps.rename_apk.outputs.apk_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit**: ${{ steps.rename_apk.outputs.commit_hash }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Keystore**: consica-keystore.jks (included)" >> $GITHUB_STEP_SUMMARY

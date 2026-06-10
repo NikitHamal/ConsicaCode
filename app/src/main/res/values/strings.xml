@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Consica Code</string>
+    <string name="app_short_name">CCode</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_title">Welcome to Consica Code!</string>
+    <string name="onboarding_welcome_subtitle">Your coding ecosystem awaits. Let\'s set up your journey.</string>
+    <string name="onboarding_age_title">How old are you?</string>
+    <string name="onboarding_age_subtitle">This helps us tailor your learning experience.</string>
+    <string name="onboarding_goal_title">What do you want to learn?</string>
+    <string name="onboarding_goal_subtitle">Choose your coding adventure.</string>
+    <string name="onboarding_experience_title">What\'s your coding experience?</string>
+    <string name="onboarding_experience_subtitle">We\'ll start at the right level for you.</string>
+    <string name="onboarding_theme_title">Choose your theme feel</string>
+    <string name="onboarding_theme_subtitle">How would you like Consica Code to look and feel?</string>
+    <string name="onboarding_interests_title">What interests you?</string>
+    <string name="onboarding_interests_subtitle">Pick what excites you most about coding!</string>
+    <string name="onboarding_start">Start Growing</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_back">Back</string>
+    <string name="onboarding_skip">Skip</string>
+
+    <!-- Age Groups -->
+    <string name="age_group_8_12">8–12 years</string>
+    <string name="age_group_8_12_desc">Playful, guided, character-led learning</string>
+    <string name="age_group_13_16">13–16 years</string>
+    <string name="age_group_13_16_desc">Capable, structured, project-based</string>
+    <string name="age_group_16_plus">16+ years</string>
+    <string name="age_group_16_plus_desc">Professional, independent, powerful</string>
+
+    <!-- Goals -->
+    <string name="goal_python">Learn Python</string>
+    <string name="goal_web">Build Websites</string>
+    <string name="goal_games">Make Games</string>
+    <string name="goal_apps">Build Apps</string>
+    <string name="goal_explore">Explore Everything</string>
+    <string name="goal_creative">Creative Coding</string>
+
+    <!-- Experience Levels -->
+    <string name="experience_beginner">New to coding</string>
+    <string name="experience_beginner_desc">I\'m just getting started!</string>
+    <string name="experience_some">Some experience</string>
+    <string name="experience_some_desc">I\'ve coded a little before.</string>
+    <string name="experience_intermediate">Comfortable coder</string>
+    <string name="experience_intermediate_desc">I know the basics well.</string>
+    <string name="experience_advanced">Experienced</string>
+    <string name="experience_advanced_desc">I\'ve built projects before.</string>
+
+    <!-- Theme Intensities -->
+    <string name="theme_playful">Playful 🌱</string>
+    <string name="theme_playful_desc">Bright, animated, lots of Terra</string>
+    <string name="theme_balanced">Balanced 🌿</string>
+    <string name="theme_balanced_desc">Fun but focused</string>
+    <string name="theme_focused">Focused 🪴</string>
+    <string name="theme_focused_desc">Clean, minimal, professional</string>
+
+    <!-- Interests -->
+    <string name="interest_python">Python</string>
+    <string name="interest_web">Web Dev</string>
+    <string name="interest_games">Games</string>
+    <string name="interest_apps">Apps</string>
+    <string name="interest_ai">AI Basics</string>
+    <string name="interest_creative">Creative Code</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_playground">Playground</string>
+    <string name="nav_puzzles">Puzzles</string>
+    <string name="nav_rewards">Rewards</string>
+    <string name="nav_path">Path</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_workspace">Workspace</string>
+
+    <!-- Terra the Owl -->
+    <string name="terra_name">Terra</string>
+    <string name="terra_greeting_morning">Hoot! Ready to grow some code today?</string>
+    <string name="terra_greeting_afternoon">Hey there, coder! Let\'s make something awesome!</string>
+    <string name="terra_greeting_evening">Evening explorer! Perfect time for some coding magic.</string>
+    <string name="terra_proud">Amazing work! Your ecosystem is thriving!</string>
+    <string name="terra_encourage">Don\'t worry! Every bug is just a plant that needs water.</string>
+    <string name="terra_hint">Try looking at line 3 — something seems a little dry there.</string>
+    <string name="terra_offline">We\'re offline, but that\'s okay! Everything you do is saved right here.</string>
+    <string name="terra_welcome_back">Welcome back! Your biomes have been growing while you were away.</string>
+
+    <!-- Home / Biome Map -->
+    <string name="home_title">Your Biome</string>
+    <string name="home_streak">Day Streak</string>
+    <string name="home_xp">XP</string>
+    <string name="home_badges">Badges</string>
+    <string name="home_sun_coins">Sun Coins</string>
+    <string name="home_water_drops">Water Drops</string>
+    <string name="home_next_lesson">Next: %1$s</string>
+    <string name="home_locked">Locked</string>
+    <string name="home_continue">Continue Learning</string>
+
+    <!-- Playground -->
+    <string name="playground_title">Green-Code Playground</string>
+    <string name="playground_run">Run</string>
+    <string name="playground_grow">Grow!</string>
+    <string name="playground_language">Language</string>
+    <string name="playground_output">Output</string>
+    <string name="playground_preview">Preview</string>
+    <string name="playground_hints">Hints</string>
+    <string name="playground_clear">Clear</string>
+    <string name="playground_save">Save</string>
+    <string name="playground_template">Template</string>
+    <string name="playground_line">Line</string>
+
+    <!-- Puzzles -->
+    <string name="puzzle_title">Code Puzzles</string>
+    <string name="puzzle_drag_hint">Drag the blocks into the correct order</string>
+    <string name="puzzle_correct">Perfect! The code blooms!</string>
+    <string name="puzzle_try_again">Almost! Try rearranging the blocks.</string>
+    <string name="puzzle_check">Check Order</string>
+    <string name="puzzle_reset">Reset</string>
+
+    <!-- Ecosystem View -->
+    <string name="ecosystem_title">Ecosystem View</string>
+    <string name="ecosystem_success">Your code made something grow!</string>
+    <string name="ecosystem_error">Oh! A little bug appeared. Let\'s fix it together.</string>
+    <string name="ecosystem_growing">Growing your ecosystem…</string>
+
+    <!-- Rewards -->
+    <string name="rewards_title">Rewards</string>
+    <string name="rewards_xp_earned">+%1$d XP</string>
+    <string name="rewards_badge_unlocked">New Badge Unlocked!</string>
+    <string name="rewards_streak_badge">%1$d-Day Streak!</string>
+    <string name="rewards_level_up">Level Up!</string>
+    <string name="rewards_mastery">Mastery Achieved</string>
+
+    <!-- Badge Names -->
+    <string name="badge_first_sprout">First Sprout</string>
+    <string name="badge_code_seedling">Code Seedling</string>
+    <string name="badge_html_planter">HTML Planter</string>
+    <string name="badge_python_bloom">Python Bloom</string>
+    <string name="badge_bug_squasher">Bug Squasher</string>
+    <string name="badge_puzzle_master">Puzzle Master</string>
+    <string name="badge_streak_warrior">Streak Warrior</string>
+    <string name="badge_web_gardener">Web Gardener</string>
+    <string name="badge_code_forester">Code Forester</string>
+    <string name="badge_ecosystem_guardian">Ecosystem Guardian</string>
+    <string name="badge_professional_coder">Professional Coder</string>
+
+    <!-- Learning Path -->
+    <string name="path_title">Learning Path</string>
+    <string name="path_beginner_web">Beginner Web</string>
+    <string name="path_beginner_python">Beginner Python</string>
+    <string name="path_intermediate">Intermediate</string>
+    <string name="path_advanced">Advanced</string>
+    <string name="path_completed">✓ Completed</string>
+    <string name="path_in_progress">In Progress</string>
+
+    <!-- Workspace -->
+    <string name="workspace_title">Workspace</string>
+    <string name="workspace_new_project">New Project</string>
+    <string name="workspace_recent">Recent</string>
+    <string name="workspace_templates">Templates</string>
+    <string name="workspace_my_projects">My Projects</string>
+    <string name="workspace_empty">No projects yet. Start coding!</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_high_contrast">High Contrast Mode</string>
+    <string name="settings_reduced_motion">Reduced Motion</string>
+    <string name="settings_sound">Sound Effects</string>
+    <string name="settings_guidance_level">Terra\'s Guidance Level</string>
+    <string name="settings_age_group">Age Group</string>
+    <string name="settings_theme_intensity">Theme Intensity</string>
+    <string name="settings_professional_mode">Professional Mode</string>
+    <string name="settings_reset_progress">Reset Progress</string>
+    <string name="settings_export_progress">Export Progress Summary</string>
+    <string name="settings_about">About Consica Code</string>
+    <string name="settings_version">Version 1.0.0</string>
+
+    <!-- Professional Mode -->
+    <string name="pro_mode_locked">Unlock by reaching Level 10 or completing 50 lessons</string>
+    <string name="pro_mode_unlocked">Professional mode is unlocked!</string>
+
+    <!-- Offline -->
+    <string name="offline_title">You\'re Offline</string>
+    <string name="offline_message">No internet? No problem! Everything works offline and your progress is saved locally.</string>
+
+    <!-- General -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="close">Close</string>
+    <string name="loading">Growing…</string>
+    <string name="error_generic">Something went wrong. Try again!</string>
+    <string name="success">Great job!</string>
+
+    <!-- Accessibility -->
+    <string name="a11y_terra_avatar">Terra the Owl, your coding guide</string>
+    <string name="a11y_biome_node">Learning node: %1$s</string>
+    <string name="a11y_locked_node">Locked: %1$s</string>
+    <string name="a11y_run_code">Run your code</string>
+    <string name="a11y_drag_block">Drag code block: %1$s</string>
+    <string name="a11y_badge_unlocked">Badge unlocked: %1$s</string>
+    <string name="a11y_streak">Current streak: %1$d days</string>
+</resources>
